@@ -10,7 +10,7 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold text-blue-600">Muzamil Hussain</h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <ul className="hidden lg:flex space-x-6 text-gray-700 font-medium">
           <li><a href="#about" className="hover:text-blue-600">About</a></li>
           <li><a href="#skills" className="hover:text-blue-600">Skills</a></li>
           <li><a href="#projects" className="hover:text-blue-600">Projects</a></li>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden relative w-8 h-6 flex flex-col justify-between items-center"
+          className="lg:hidden relative w-8 h-6 flex flex-col justify-between items-center"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
@@ -53,7 +53,7 @@ const Navbar = () => {
 
       {/* Mobile Menu with Animation */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out px-6 ${
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out px-6 ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
