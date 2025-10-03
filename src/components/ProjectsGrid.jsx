@@ -48,9 +48,10 @@ const ProjectsGrid = () => {
         }
 
         .iframe-desktop {
-          width: 1440px;       /* force desktop width */
+          width: 1400px;       /* force desktop width */
           height: 900px;       /* large desktop height */
           border: 0;
+          overflow: hidden;
           transform: scale(0.25); /* shrink to fit container */
           transform-origin: top left;
           pointer-events: auto; /* allow scrolling & clicks */

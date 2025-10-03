@@ -11,29 +11,30 @@ const Projects = () => {
 
       <div className="relative mb-20">
         {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-300 h-full"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-300 h-full hidden md:block"></div>
 
         {[...projects].reverse().map((project, i) => (
           <div
             key={i}
-            className={`mb-12 flex items-center w-full ${
-              i % 2 === 0 ? "justify-start" : "justify-end"
-            }`}
+            className={`mb-12 flex w-full ${
+              i % 2 === 0 ? "md:justify-start" : "md:justify-end"
+            } justify-center`}
           >
             {/* Card */}
             <div
-              className={`relative w-full md:w-5/12 p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition ${
-                i % 2 === 0 ? "text-left" : "text-right"
-              }`}
+              className={`relative w-full md:w-5/12 p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition`}
             >
               {/* Circle indicator */}
               <span
-                className={`absolute top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow ${
-                  i % 2 === 0
-                    ? "-right-12 md:-right-3"
-                    : "-left-12 md:-left-3"
-                }`}
+                className={`absolute top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow shadow-blue-600 
+                  hidden md:block 
+                  ${i % 2 === 0 ? "-right-12 md:-right-3 " : "-left-12 md:-left-3"}`}
               ></span>
+
+              {/* On mobile, show dot inside */}
+              <span className="md:hidden flex items-center justify-center mb-4">
+                <span className="w-4 h-4 bg-blue-600 rounded-full"></span>
+              </span>
 
               <h3 className="text-xl font-semibold text-blue-600 mb-2">
                 {project.name}
