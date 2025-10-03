@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-2 text-gray-700">
               <Phone className="w-5 h-5 text-blue-600" />
-              <span>0303-0458064</span>
+              <a href="tel:+923265579626">0326-5579626</a>
             </div>
           </div>
 
@@ -67,7 +67,6 @@ const Contact = () => {
             >
               <FaStackOverflow className="w-10 h-10 p-2 rounded-md hover:bg-blue-500 hover:text-white border-2 border-blue-500 text-blue-500 transition-all duration-200 ease-in-out" />
             </a>
-            {/* <a href="#" className=""><Instagram className="w-10 h-10 p-2 rounded-md hover:bg-blue-500 hover:text-white border-2 border-blue-500  text-blue-500 transition-all duration-200 ease-in-out" /></a> */}
             <a
               href="#"
               target="_blank"

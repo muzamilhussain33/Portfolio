@@ -19,7 +19,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="bg-gradient-to-b from-gray-50 to-gray-100 py-20"
+      className="bg-gradient-to-b from-gray-50 to-gray-100 py-10"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}

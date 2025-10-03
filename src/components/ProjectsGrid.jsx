@@ -2,7 +2,7 @@ import projects from "../services/projects";
 
 const ProjectsGrid = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-10">
       <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">
         All Projects
       </h2>

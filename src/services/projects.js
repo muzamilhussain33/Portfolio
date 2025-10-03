@@ -6,6 +6,7 @@ const projects = [
         date: "Apirl/2025-----June/2025",
         // tech: "React.js, Tailwind CSS, EmailJS",
         live: "https://coralplus.ae",
+        image: "",
         link: "#",
     },
     {
@@ -15,6 +16,7 @@ const projects = [
         date: "May/2025-----June/2025",
         // tech: "React.js, Tailwind CSS, EmailJS",
         live: "https://nordicbiogains.com",
+        image: "",
         link: "#",
     },
     {
@@ -23,6 +25,7 @@ const projects = [
         live: "https://coralplus.ae",
         desc: "Rental marketplace app for subletting properties.",
         date: "May/2025-----Continue",
+        image: "",
         link: "#",
     },
     {
@@ -31,14 +34,16 @@ const projects = [
         live: "https://inzaar-h795.vercel.app/",
         desc: "Learning Management System (Wesite + Portal)",
         date: "June/2025-----Continue",
+        image: "/images/inzaar.png",
         link: "#",
     },
     {
         name: "Patient Appointment System",
         role: "Full Stack Developer",
         live: "https://patient-appointment.vercel.app",
-        desc: "Learning Management System (Wesite + Portal)",
+        desc: "Appointment and Patient magement system for clinic and hospital",
         date: "June/2025-----Continue",
+        image: "/images/patient_management_system.png",
         link: "#",
     },
 

@@ -1,6 +1,7 @@
 import React from "react";
 
 const mainSkills = [
+  { name: "JavaScript", level: 85 },
   { name: "React.js", level: 90 },
   { name: "Next.js", level: 70 },
   { name: "Tailwind CSS", level: 95 },
@@ -20,7 +21,7 @@ const otherSkills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-gray-100 py-16">
+    <section id="skills" className="bg-gray-100 py-10">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-blue-600 mb-10 text-center">

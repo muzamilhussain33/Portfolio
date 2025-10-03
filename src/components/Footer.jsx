@@ -1,53 +1,84 @@
 import React from "react";
-import { Mail, Phone, Github, Linkedin, Twitter } from "lucide-react"; // lucide icons for social links
+import { Mail, Phone } from "lucide-react"; // lucide icons
+import { FaTiktok, FaFacebookF } from "react-icons/fa";
+import { Twitter, Instagram } from "lucide-react";
+import projects from "../services/projects";
 
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-r from-blue-600 to-indigo-400 text-white py-12">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
+  // Get the last two projects (latest)
+  const latestProjects = projects.slice(-2);
 
+  return (
+    <footer className="bg-gray-500 text-white">
+      <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+        
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <img
-            src="/profile.jpg" // replace with your image path
-            alt="Muzamil Hussain"
-            className="w-20 h-20 rounded-full mb-4 border-2 border-white shadow-lg"
-          />
           <h2 className="text-2xl font-bold">Muzamil Hussain</h2>
           <p className="mt-2 text-gray-200 max-w-xs">
-            Crafting clean and modern web experiences with passion. Always learning and building. 🚀
-          </p>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex flex-col items-center md:items-end text-center md:text-right">
-          <h3 className="text-xl font-semibold mb-4">Contact Me</h3>
-          <p className="flex items-center gap-2 mb-2">
-            <Mail className="w-4 h-4" /> 
-            <a href="mailto:muzamilhussain369@gmail.com" className="hover:underline">muzamilhussain369@gmail.com</a>
-          </p>
-          <p className="flex items-center gap-2 mb-2">
-            <Phone className="w-4 h-4" /> 0303-0458064
+            Crafting clean and modern web experiences with passion. Always learning and building.
           </p>
 
-          {/* Social Links */}
-          <div className="flex gap-4 mt-4 justify-center md:justify-end">
-            <a href="https://github.com/muzamilhussain369" target="_blank" rel="noopener noreferrer" className="hover:text-gray-200">
-              <Github className="w-6 h-6" />
+          <div className="flex gap-4 mt-4 justify-center md:justify-start">
+            <a href="https://tiktok.com/@muzamilcreates" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
+              <FaTiktok className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/muzamilhussain" target="_blank" rel="noopener noreferrer" className="hover:text-gray-200">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="https://twitter.com/muzamilhussain" target="_blank" rel="noopener noreferrer" className="hover:text-gray-200">
+            <a href="https://twitter.com/muzamilhussain" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
               <Twitter className="w-6 h-6" />
             </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
+              <FaFacebookF className="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com/muzamilcreates?igsh=bWc4eWltc3E5aXpi" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
+              <Instagram className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+
+        {/* Middle Section - Menu */}
+        <div className="hidden  md:flex flex-col items-center md:items-start text-center md:text-left text-[14px]">
+          <h3 className="text-xl font-semibold mb-4 text-white hover:text-blue-300">Menu</h3>
+          <a href="#projects" className="mb-2 hover:underline hover:text-blue-300">Projects</a>
+          <a href="#experience" className="mb-2 hover:underline hover:text-blue-300">Experience</a>
+          <a href="#education" className="mb-2 hover:underline hover:text-blue-300">Education</a>
+          <a href="#contact" className="mb-2 hover:underline hover:text-blue-300">Contact</a>
+        </div>
+
+        {/* Right Section - Latest Projects */}
+        <div className="flex flex-col items-start text-center md:text-left">
+          <h3 className="text-xl font-semibold mb-4 text-white">Latest Projects</h3>
+          <div className="space-y-4 w-full">
+            {latestProjects.slice().reverse().map((project, i) => (
+              <div key={i} className="flex flex-row gap-3 items-center text-start sm:items-start">
+                
+                {/* Image */}
+                <img
+                  className="w-24 h-16 object-cover rounded-md"
+                  src={project.image}
+                  alt={project.name}
+                />
+
+                {/* Text */}
+                <div>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:underline font-bold text-[16px] hover:text-blue-300"
+                  >
+                    {project.name}
+                  </a>
+                  <p className="text-[14px] text-gray-200">{project.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Bottom Copyright */}
-      <div className="mt-8 text-center text-gray-200 text-sm">
-        © {new Date().getFullYear()} Muzamil Hussain. All rights reserved.
+      <div className="mt-8 text-center bg-black text-gray-200 text-sm py-3">
+        © {new Date().getFullYear()} Copyright Muzamil Hussain. | All rights reserved.
       </div>
     </footer>
   );
