@@ -1,19 +1,65 @@
 import React from "react";
+import { Briefcase } from "lucide-react";
+
+// Work Experience Data
+const experiences = [
+  // In future just add more objects like this 👇
+  // {
+  //   title: "Frontend Developer",
+  //   company: "XYZ Software House",
+  //   period: "Jan 2024 – Feb 2025",
+  //   responsibilities: [
+  //     "Built responsive UI with React and Tailwind.",
+  //     "Worked closely with designers and backend team.",
+  //     "Implemented authentication and role-based access.",
+  //   ],
+  // },
+  {
+    title: "Junior Developer",
+    company: "Success Sahiwal Community",
+    period: "March 2025 – Present",
+    responsibilities: [
+      "Collaborated in a team environment on real-world projects.",
+      "Worked on frontend development with React.js and Next.js.",
+      "Integrated APIs and deployed apps on cloud platforms.",
+      "Improved debugging and performance optimization in live apps.",
+    ],
+  },
+];
 
 const Experience = () => {
   return (
-    <section id="experience" className="bg-gray-100 py-16">
+    <section id="experience" className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-blue-600 mb-6">Work Experience</h2>
-        <div className="bg-white p-6 border rounded-lg shadow">
-          <h3 className="text-xl font-semibold">Junior Developer – Success Sahiwal Community</h3>
-          <p className="text-sm text-gray-500">March 2025 – Present</p>
-          <ul className="list-disc ml-6 mt-2 text-gray-700">
-            <li>Collaborated in a team environment on real-world projects.</li>
-            <li>Worked on frontend development with React.js and Next.js.</li>
-            <li>Integrated APIs and deployed apps on cloud platforms.</li>
-            <li>Improved debugging and performance optimization in live apps.</li>
-          </ul>
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-center text-blue-600 mb-12">
+          Work Experience
+        </h2>
+
+        {/* Timeline container */}
+        <div className="relative border-l-4 border-blue-200 ml-4">
+          {experiences.map((exp, index) => (
+            <div key={index} className="mb-10 ml-6 group">
+              {/* Icon */}
+              <span className="absolute -left-5 flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full ring-4 ring-blue-100 shadow-md group-hover:scale-110 transition-transform">
+                <Briefcase className="text-white w-5 h-5" />
+              </span>
+
+              {/* Card */}
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {exp.title} – <span className="text-blue-600">{exp.company}</span>
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
+
+                <ul className="list-disc ml-5 space-y-2 text-gray-700">
+                  {exp.responsibilities.map((task, i) => (
+                    <li key={i}>{task}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
