@@ -17,7 +17,15 @@ const Navbar = () => {
           <li><a href="#experience" className="hover:text-blue-600">Experience</a></li>
           <li><a href="#education" className="hover:text-blue-600">Education</a></li>
           <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
-          
+          <li>
+            <a
+              href="/cv/Muzamil_Hussain.pdf" // Put CV inside public/cv/
+              download="Muzamil Hussain.pdf"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              Download CV
+            </a>
+          </li>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -45,7 +53,7 @@ const Navbar = () => {
 
       {/* Mobile Menu with Animation */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out px-6 ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -56,6 +64,18 @@ const Navbar = () => {
           <li><a href="#experience" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Experience</a></li>
           <li><a href="#education" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Education</a></li>
           <li><a href="#contact" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Contact</a></li>
+
+          {/* Mobile Download CV Button */}
+          <li className="w-full flex mx-auto">
+            <a
+              href="/cv/Muzamil_Hussain.pdf"
+              download="Muzamil Hussain.pdf"
+              onClick={() => setIsOpen(false)}
+              className="w-full px-6 text-center text-blue-600 py-3 border border-blue-500 hover:text-white rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              Download CV
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
