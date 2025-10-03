@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section
-      className="h-[800px] flex flex-col justify-center items-center bg-gradient-to-r from-blue-50 to-blue-100  md:px-16"
+      className="h-[800px] flex flex-col justify-center items-center bg-gradient-to-r from-blue-50 to-blue-100 p-6 md:px-16"
       id="home"
     >
       <div className="max-w-6xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-10 mx-auto  lg:px-10">
