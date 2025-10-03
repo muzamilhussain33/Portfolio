@@ -10,8 +10,8 @@ const Projects = () => {
       </h2>
 
       <div className="relative mb-20">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-300 h-full hidden md:block"></div>
+        {/* Vertical line (always visible) */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 md:w-1 bg-blue-300 h-full"></div>
 
         {[...projects].reverse().map((project, i) => (
           <div
@@ -24,17 +24,21 @@ const Projects = () => {
             <div
               className={`relative w-full md:w-5/12 p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition`}
             >
-              {/* Circle indicator */}
+              {/* Circle indicator (desktop, outside card) */}
               <span
-                className={`absolute top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow shadow-blue-600 
-                  hidden md:block 
-                  ${i % 2 === 0 ? "-right-12 md:-right-3 " : "-left-12 md:-left-3"}`}
-              ></span>
-
-              {/* On mobile, show dot inside */}
-              <span className="md:hidden flex items-center justify-center mb-4">
-                <span className="w-4 h-4 bg-blue-600 rounded-full"></span>
+                className={`absolute top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow shadow-blue-600
+                  hidden md:block
+                  ${i % 2 === 0 ? "-right-12 md:-right-3" : "-left-12 md:-left-3"}`}
+              >
+                {/* Horizontal connector line (desktop only) */}
+                <span
+                  className={`absolute top-1/2 transform -translate-y-1/2 h-0.5 bg-blue-400
+                    ${i % 2 === 0 ? "left-full w-12" : "right-full w-12"}`}
+                ></span>
               </span>
+
+              {/* Circle indicator (mobile, centered on timeline line) */}
+              <span className="md:hidden absolute left-1/2 transform -translate-x-1/2 -top-3 w-5 h-5 bg-blue-600 border-4 border-white shadow shadow-blue-600 rounded-full"></span>
 
               <h3 className="text-xl font-semibold text-blue-600 mb-2">
                 {project.name}
