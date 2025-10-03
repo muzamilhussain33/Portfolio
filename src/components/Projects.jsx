@@ -1,40 +1,55 @@
-import React from "react";
-
-const projects = [
-  {
-    name: "Sublet",
-    desc: "Rental marketplace app built in React Native. Implemented Redux, image upload, and deployed backend on Azure + S3.",
-    tech: "React Native, Redux, Node.js, Azure, AWS S3",
-    link: "#"
-  },
-  {
-    name: "Inzaar LMS",
-    desc: "Learning Management System with Next.js frontend and React.js dashboards.",
-    tech: "Next.js, React.js, Tailwind CSS",
-    link: "#"
-  },
-  {
-    name: "Patient Appointment System",
-    desc: "React-based app for managing appointments and scheduling.",
-    tech: "React.js, Node.js, Express",
-    link: "#"
-  }
-];
+import ProjectsGrid from "./ProjectsGrid";
+import projects from "../services/projects";
 
 const Projects = () => {
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-6 py-16 ">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((project, i) => (
-          <div key={i} className="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-            <p className="text-gray-600 mb-2">{project.desc}</p>
-            <p className="text-sm text-gray-500">Tech: {project.tech}</p>
-            <a href={project.link} className="text-blue-600 hover:underline text-sm mt-2 inline-block">View More</a>
+    <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
+      {/* --- Timeline View --- */}
+      <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">
+        Projects Timeline
+      </h2>
+
+      <div className="relative mb-20">
+        {/* Vertical line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-300 h-full"></div>
+
+        {[...projects].reverse().map((project, i) => (
+          <div
+            key={i}
+            className={`mb-12 flex items-center w-full ${
+              i % 2 === 0 ? "justify-start" : "justify-end"
+            }`}
+          >
+            {/* Card */}
+            <div
+              className={`relative w-full md:w-5/12 p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition ${
+                i % 2 === 0 ? "text-left" : "text-right"
+              }`}
+            >
+              {/* Circle indicator */}
+              <span
+                className={`absolute top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow ${
+                  i % 2 === 0
+                    ? "-right-12 md:-right-3"
+                    : "-left-12 md:-left-3"
+                }`}
+              ></span>
+
+              <h3 className="text-xl font-semibold text-blue-600 mb-2">
+                {project.name}
+              </h3>
+              <p className="text-gray-600 mb-2">{project.desc}</p>
+              <p className="text-sm text-gray-500 mb-1">Role: {project.role}</p>
+              <p className="text-sm text-gray-500 mb-3">
+                <span className="font-semibold">Duration:</span> {project.date}
+              </p>
+            </div>
           </div>
         ))}
       </div>
+
+      {/* --- Grid View --- */}
+      <ProjectsGrid />
     </section>
   );
 };

@@ -8,19 +8,12 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="bg-gray-50 text-gray-800">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Contact />
-      <Footer />
+      <Home />
     </div>
   );
 }
