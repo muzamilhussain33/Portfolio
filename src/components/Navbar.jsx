@@ -23,7 +23,7 @@ const Navbar = () => {
               download="Muzamil Hussain.pdf"
               className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
             >
-              Download CV
+              Download Resume
             </a>
           </li>
         </ul>
@@ -73,7 +73,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="w-full px-6 text-center text-blue-600 py-3 border border-blue-500 hover:text-white rounded-lg shadow hover:bg-blue-700 transition"
             >
-              Download CV
+              Download Resume
             </a>
           </li>
         </ul>

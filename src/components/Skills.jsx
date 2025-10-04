@@ -1,23 +1,15 @@
 import React from "react";
+import {mainSkills} from "../services/skills";
+import {otherSkills} from "../services/skills"
 
-const mainSkills = [
-  { name: "JavaScript", level: 85 },
-  { name: "React.js", level: 90 },
-  { name: "Next.js", level: 70 },
-  { name: "Tailwind CSS", level: 95 },
-  { name: "Bootstrap", level: 70 },
-  { name: "Node.js", level: 70 },
-  { name: "React Native", level: 55 },
-  { name: "Git/GitHub", level: 95 },
-];
 
-const otherSkills = [
-  "Express.js",
-  "Redux Toolkit",
-  "React Query",
-  "AWS EC2",
-  "Azure",
-];
+// const otherSkills = [
+//   "Express.js",
+//   "Redux Toolkit",
+//   "React Query",
+//   "AWS EC2",
+//   "Azure",
+// ];
 
 const Skills = () => {
   return (
