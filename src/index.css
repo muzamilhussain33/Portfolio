@@ -193,6 +193,13 @@ html {
 
 
 /* Add this to your index.css file */
+.hover-text-gradient:hover{
+  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* blue-500 to purple-600 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
 
 .text-gradient-static {
   background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* blue-500 to purple-600 */
