@@ -49,8 +49,8 @@ const Education = () => {
                 <GraduationCap className="text-white w-5 h-5" />
               </span>
 
-              <div className="bg-white p-6 rounded-xl shadow-md 
-                              hover:shadow-xl 
+              <div className="bg-white p-6 mx-2 rounded-xl shadow-md 
+                              hover:shadow-xl hover:-translate-y-1
                               transition-all duration-300 border border-gray-100 ">
                 <span className="text-xl font-semibold mb-1 text-gradient-static">
                   {edu.degree}
