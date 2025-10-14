@@ -24,17 +24,15 @@ const ProgressBar = ({ level }) => {
   );
 };
 
-
 const Skills = () => {
   return (
     <section id="skills" className="bg-gray-100 py-16">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Change #1: Removed 'text-center' to align left */}
         <h2 
           className="text-3xl font-bold mb-10 opacity-0 section-item-animate text-gradient-animated"
           style={{ animationDelay: '100ms' }}
         >
-          My Skills
+          <span className="text-gradient-animated">My Skills</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -46,29 +44,30 @@ const Skills = () => {
             >
               <div className="flex justify-between mb-1">
                 <span className="text-gray-800 font-medium">{skill.name}</span>
-                {/* Change #2: Added gradient to percentage text */}
                 <span className="text-gradient-static">{skill.level}%</span>
               </div>
               
               <ProgressBar level={skill.level} />
-
             </div>
           ))}
         </div>
 
         <div className="mt-16">
-          {/* Change #3: Added animated gradient to 'Other Skills' heading */}
           <h3 
             className="text-2xl font-semibold mb-4 opacity-0 section-item-animate text-gradient-animated"
             style={{ animationDelay: '800ms' }}
           >
-            Other Skills
+            <span className="text-gradient-animated">Other Skills</span>
           </h3>
           <div className="flex flex-wrap gap-3">
             {otherSkills.map((skill, i) => (
               <span
                 key={i}
-                className="px-4 py-2 bg-white border rounded-lg shadow text-gray-700 hover:bg-blue-50 transition opacity-0 section-item-animate"
+                // --- THIS IS THE UPDATED LINE ---
+                className="px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm font-medium
+                           hover:shadow-lg hover:-translate-y-1
+                           transition-all duration-300 ease-in-out cursor-pointer
+                           opacity-0 section-item-animate other-skill-text-gradient" 
                 style={{ animationDelay: `${900 + i * 75}ms` }}
               >
                 {skill}

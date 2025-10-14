@@ -201,3 +201,23 @@ html {
   color: transparent;
   font-weight: 600; /* semibold */
 }
+
+/* Add this to the bottom of your index.css file */
+
+.other-skill-text-gradient {
+  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* Same gradient as the percentages */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+/* Add this to the bottom of your index.css file */
+
+.other-skill-text-gradient:hover {
+  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* Your theme gradient */
+  /* color: white; */
+  color: transparent;
+  border-color: transparent; /* Makes the gradient fill the entire space */
+}
