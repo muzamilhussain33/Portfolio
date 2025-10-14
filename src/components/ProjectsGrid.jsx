@@ -1,17 +1,24 @@
+import React from "react";
 import projects from "../services/projects";
 
 const ProjectsGrid = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-10">
-      <h2 className="text-3xl font-bold text-blue-600 mb-12 text-center">
+      <h2 
+        className="text-3xl font-bold mb-12 text-center opacity-0 section-item-animate text-gradient-animated"
+        style={{ animationDelay: '100ms' }}
+      >
         All Projects
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, i) => (
+          // Card with fade-in and hover animations
           <div
             key={i}
-            className="bg-white border rounded-lg shadow hover:shadow-xl overflow-hidden"
+            className="bg-white border rounded-lg shadow hover:shadow-xl overflow-hidden
+                       opacity-0 section-item-animate hover:-translate-y-1 transition-all duration-300"
+            style={{ animationDelay: `${200 + i * 150}ms` }}
           >
             {/* Project live embed with forced desktop view */}
             <div className="relative h-48 overflow-hidden iframe-wrapper">
@@ -24,15 +31,17 @@ const ProjectsGrid = () => {
 
             {/* Info below */}
             <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold text-blue-600">
+              <h3 className="text-lg font-semibold text-gradient-static">
                 {project.name}
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 mb-2">
                 {project.role} • {project.date}
               </p>
+              {/* Button with animated gradient */}
               <a
                 href={project.link}
-                className="inline-block mt-4 px-4 py-2 text-sm bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+                className="inline-block mt-4 px-4 py-2 text-sm text-white rounded-lg shadow 
+                           transition hover:scale-105 button-gradient-animated"
               >
                 View Details
               </a>
