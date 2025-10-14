@@ -221,3 +221,39 @@ html {
   color: transparent;
   border-color: transparent; /* Makes the gradient fill the entire space */
 }
+
+
+/* Add this to the bottom of your index.css file */
+
+/* For the social media icons */
+.social-icon-themed {
+  /* position: relative; */
+  /* background-color: white;  */
+  color: blueviolet;
+  border: 2px solid blueviolet; 
+}
+
+/* This pseudo-element creates the gradient border */
+.social-icon-themed::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  padding: 2px;
+  border-radius: 6px; 
+  background: linear-gradient(90deg, #3b82f6, #a855f7); 
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* This handles the hover effect */
+.social-icon-themed:hover {
+  background-image: linear-gradient(90deg, #3b82f6, #a855f7);
+  -webkit-background-clip: initial; /* Resets clipping so the background fills the whole box */
+  background-clip: initial;
+  color: white !important; /* Forces the icon color to white */
+  border-color: transparent; /* Makes the gradient fill the entire space */
+}

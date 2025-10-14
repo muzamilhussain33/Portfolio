@@ -8,8 +8,8 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setLoading(true);   // start loader
-    setStatus("");      // reset message
+    setLoading(true);
+    setStatus("");
 
     emailjs
       .sendForm(
@@ -34,37 +34,38 @@ const ContactForm = () => {
   };
 
   return (
+    // Note: We removed the padding and title from here as they are handled in the parent Contact.jsx
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="flex-1 bg-white rounded-lg space-y-4 p-6"
+      className="space-y-5" 
     >
-      <h2 className="text-2xl font-bold text-blue-600 mb-4">Contact Me</h2>
-
       <input
         type="text"
         name="user_name"
         placeholder="Your Name"
-        className="w-full border border-gray-300 p-2 rounded"
+        className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
         required
       />
       <input
         type="email"
         name="user_email"
         placeholder="Your Email"
-        className="w-full border border-gray-300 p-2 rounded"
+        className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
         required
       />
       <textarea
         name="message"
         placeholder="Your Message"
-        className="w-full border border-gray-300 p-2 rounded h-32"
+        className="w-full border border-gray-300 p-3 rounded-lg h-32 focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
         required
       ></textarea>
 
+      {/* Button with animated gradient */}
       <button
         type="submit"
-        className="flex justify-center items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition disabled:opacity-70"
+        className="flex justify-center items-center gap-2 w-full text-white px-4 py-3 rounded-lg 
+                   transition hover:scale-105 button-gradient-animated disabled:opacity-70"
         disabled={loading}
       >
         {loading ? (
@@ -98,13 +99,13 @@ const ContactForm = () => {
 
       {/* Success / Error messages */}
       {status === "success" && (
-        <p className="mt-3 text-green-600 bg-green-100 p-2 rounded-lg text-sm text-center animate-bounce">
-          ✅ Message sent successfully!
+        <p className="mt-4 text-green-600 bg-green-100 p-3 rounded-lg text-sm text-center animate-bounce">
+          ✅ Message sent successfully! I'll be in touch soon.
         </p>
       )}
       {status === "error" && (
-        <p className="mt-3 text-red-600 bg-red-100 p-2 rounded-lg text-sm text-center">
-          ❌ Oops! Something went wrong. Please try again.
+        <p className="mt-4 text-red-600 bg-red-100 p-3 rounded-lg text-sm text-center">
+          ❌ Oops! Something went wrong. Please try again or email me directly.
         </p>
       )}
     </form>
