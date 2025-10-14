@@ -42,7 +42,7 @@ const Education = () => {
               style={{ animationDelay: `${200 + index * 200}ms` }}
             >
               {/* The icon's position is now relative to the new line */}
-              <span className="image-glow absolute -left-5 flex items-center justify-center w-10 h-10 
+              <span className="image-glow absolute -left-11 flex items-center justify-center w-10 h-10 
                                bg-gradient-to-br from-blue-500 to-purple-600 
                                rounded-full ring-4 ring-blue-100 shadow-md 
                                group-hover:scale-110 transition-transform">
