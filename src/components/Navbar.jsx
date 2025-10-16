@@ -63,23 +63,23 @@ const Navbar = () => {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col items-center space-y-4 py-4 text-gray-700 font-medium">
-          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '100ms' }}>
+        <ul className="flex flex-col items-center space-y-4 py-4 text-gray-700 font-medium ">
+          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '100ms' }}>
             <a href="#about" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>About</a>
           </li>
-          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '200ms' }}>
+          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '200ms' }}>
             <a href="#skills" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Skills</a>
           </li>
-          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '300ms' }}>
+          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '300ms' }}>
             <a href="#projects" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Projects</a>
           </li>
-          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '400ms' }}>
+          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '400ms' }}>
             <a href="#experience" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Experience</a>
           </li>
-          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '500ms' }}>
+          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '500ms' }}>
             <a href="#education" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Education</a>
           </li>
-          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '600ms' }}>
+          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '600ms' }}>
             <a href="#contact" className="hover:text-blue-600" onClick={() => setIsOpen(false)}>Contact</a>
           </li>
           <li className="w-full flex mx-auto opacity-0 menu-item-animate" style={{ animationDelay: '700ms' }}>
