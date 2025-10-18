@@ -40,11 +40,11 @@ const projects = [
     {
         name: "Patient Appointment System",
         role: "Full Stack Developer",
-        live: "https://patient-appointment.vercel.app",
+        live: "https://patientaappointmentmanagementsystem.netlify.app/",
         desc: "Appointment and Patient magement system for clinic and hospital",
         date: "June/2025-----Continue",
         image: "/images/patient_management_system.png",
-        link: "#",
+        link: "https://patientaappointmentmanagementsystem.netlify.app/",
     },
 
 ];
