@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Education from "../components/Education";
@@ -9,6 +10,12 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
 function Home() {
+
+  useEffect(() => {
+    localStorage.removeItem('isAdminLoggedIn');
+  })
+
+
   return (
     <div className="bg-gray-50 text-gray-800">
       <Navbar />
