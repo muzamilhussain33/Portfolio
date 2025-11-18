@@ -13,7 +13,7 @@ export default function AdminDashboard() {
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard': return <DashboardHome setActiveTab={setActiveTab} />;
-      // case 'projects': return <Projects />;
+      case 'projects': return <Projects />;
       case 'skills': return <Skills />;
       case 'experience': return <Experience />;
       case 'education': return <Education />;
