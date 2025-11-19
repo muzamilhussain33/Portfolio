@@ -1,5 +1,5 @@
 import React from 'react';
-import { FolderGit2, Cpu, Briefcase, GraduationCap, Bell } from 'lucide-react';
+import { FolderGit2, Cpu, Briefcase, GraduationCap, Bell, LogOut } from 'lucide-react';
 
 export default function DashboardHome({ setActiveTab }) {
   const stats = [
@@ -9,40 +9,34 @@ export default function DashboardHome({ setActiveTab }) {
     { id: 'education', label: 'Education', count: 'Manage', icon: <GraduationCap />, desc: 'Degrees & Certs' },
   ];
 
+  const handleLogout = () => {
+    if(confirm("Are you sure you want to log out?")) {
+        localStorage.removeItem('isAdminLoggedIn');
+        window.location.reload();
+    }
+  };
+
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 pb-8">
       
       {/* HEADER SECTION */}
-      {/* Changed to flex-row to keep items side-by-side on mobile */}
       <div className="flex flex-row justify-between items-start md:items-center mb-8 gap-2 md:gap-4">
-        
-        {/* Welcome Text */}
         <div className="mt-1 md:mt-0">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-1 md:mb-2">Dashboard</h1>
           <p className="text-[#B0B0B0] text-xs md:text-base">Welcome back, Admin.</p>
         </div>
 
-        {/* User Profile & Notification - Adjusted for Mobile */}
-        {/* shrink-0 prevents it from being squashed */}
         <div className="flex-shrink-0 flex items-center gap-2 md:gap-4 bg-[#16181C] p-1.5 pr-2 md:p-2 md:pr-4 rounded-full border border-[#B0B0B0]/10">
-            
-            {/* Bell Icon - Smaller on mobile (w-8) */}
             <button className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-[#B0B0B0] hover:text-white hover:bg-[#0A0C10] transition-colors relative">
                 <Bell className="w-4 h-4 md:w-5 md:h-5" />
                 <span className="absolute top-2 right-2 w-1.5 h-1.5 md:w-2 md:h-2 bg-[#CDFC31] rounded-full"></span>
             </button>
-            
-            {/* Divider - Smaller on mobile */}
             <div className="h-5 md:h-8 w-[1px] bg-[#B0B0B0]/20"></div>
-            
             <div className="flex items-center gap-3">
-                {/* Text hidden on mobile, visible on sm+ */}
                 <div className="text-right hidden sm:block">
                     <p className="text-white font-bold text-sm leading-none">Admin User</p>
                     <p className="text-[#B0B0B0] text-xs mt-1">Online</p>
                 </div>
-                
-                {/* Avatar Circle - Smaller on mobile (w-8) */}
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#CDFC31] flex items-center justify-center text-[#0A0C10] font-bold text-xs md:text-base">
                     AU
                 </div>
@@ -72,6 +66,21 @@ export default function DashboardHome({ setActiveTab }) {
           </button>
         ))}
       </div>
+
+      {/* MOBILE LOGOUT BUTTON */}
+      {/* md:hidden ensures it is removed on Desktop screens */}
+      <div className="mt-8 md:hidden">
+          <div className="h-[1px] bg-[#B0B0B0]/10 mb-6"></div> {/* Separator Line */}
+          
+          <button 
+            onClick={handleLogout}
+            className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#16181C] border border-red-500/20 text-red-400 font-bold hover:bg-red-500/10 active:scale-95 transition-all shadow-lg"
+          >
+            <LogOut className="w-5 h-5" />
+            <span>Log Out</span>
+          </button>
+      </div>
+
     </div>
   );
 }

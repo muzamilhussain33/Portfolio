@@ -12,9 +12,10 @@ export default function Sidebar({ activeTab, setActiveTab }) {
 
   const handleLogout = () => {
     // Implement logout functionality here
-    localStorage.removeItem('isAdminLoggedIn');
-    window.location.reload();
-    alert("Logged out!");
+    if(confirm("Are you sure you want to log out?")) {
+        localStorage.removeItem('isAdminLoggedIn');
+        window.location.reload();
+    }
   };
 
   return (
