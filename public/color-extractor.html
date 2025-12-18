@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Extractor</title>
+</head>
+<body>
+    <h1>Color Extractor</h1>
+    <img id="target-image" src="/temolate/template theme.png" style="display:none;" crossorigin="anonymous">
+    <div id="result">Calculating...</div>
+    <div id="palette"></div>
+
+    <script>
+        window.onload = function() {
+            const img = document.getElementById('target-image');
+            
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            
+            ctx.drawImage(img, 0, 0, img.width, img.height);
+            
+            // Get image data
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            
+            const colorCounts = {};
+            let maxCount = 0;
+            let dominantColor = '';
+            
+            // Simple quantization to find dominant colors (skip every 10 pixels for speed)
+            for (let i = 0; i < data.length; i += 40) {
+                const r = data[i];
+                const g = data[i+1];
+                const b = data[i+2];
+                const a = data[i+3];
+                
+                if (a < 128) continue; // Skip transparent
+                
+                // Quantize colors to reduce noise (round to nearest 10)
+                const qr = Math.round(r / 10) * 10;
+                const qg = Math.round(g / 10) * 10;
+                const qb = Math.round(b / 10) * 10;
+                
+                const key = `${qr},${qg},${qb}`;
+                colorCounts[key] = (colorCounts[key] || 0) + 1;
+                
+                if (colorCounts[key] > maxCount) {
+                    maxCount = colorCounts[key];
+                    dominantColor = key;
+                }
+            }
+            
+            // Sort colors by count
+            const sortedColors = Object.entries(colorCounts).sort((a, b) => b[1] - a[1]);
+            
+            // Get top 5 colors
+            const topColors = sortedColors.slice(0, 5).map(entry => {
+                const [r, g, b] = entry[0].split(',').map(Number);
+                return rgbToHex(r, g, b);
+            });
+            
+            document.getElementById('result').innerText = JSON.stringify(topColors);
+            
+            // Visual check
+            const palette = document.getElementById('palette');
+            topColors.forEach(color => {
+                const div = document.createElement('div');
+                div.style.backgroundColor = color;
+                div.style.width = '50px';
+                div.style.height = '50px';
+                div.style.display = 'inline-block';
+                div.innerText = color;
+                palette.appendChild(div);
+            });
+        };
+
+        function rgbToHex(r, g, b) {
+            return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+        }
+    </script>
+</body>
+</html>

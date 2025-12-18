@@ -1,8 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #CDFC31;
+  --color-background: #0A0C10;
+  --color-surface: #16181C;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B0B0B0;
+}
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
 }
 
 /* Add this to your existing index.css file */
@@ -12,6 +26,7 @@ html {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -27,7 +42,7 @@ html {
 
 .animated-background {
   /* Define a gradient with a few more colors for a smoother effect */
-  background: linear-gradient(45deg, #e0f7fa, #b3e5fc, #e1f5fe, #81d4fa);
+  background: linear-gradient(45deg, #16181C, #0A0C10, #16181C, #0A0C10);
   /* Make the background size much larger than the element */
   background-size: 400% 400%;
   /* Apply the animation */
@@ -38,9 +53,11 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -50,18 +67,23 @@ html {
 
 @keyframes glow-pulse {
   0% {
-    box-shadow: 0 0 0px 0px rgba(59, 130, 246, 0.4); /* Tailwind's blue-500 with alpha */
+    box-shadow: 0 0 0px 0px rgba(205, 252, 49, 0.4);
+    /* Acid Green with alpha */
   }
+
   50% {
-    box-shadow: 0 0 15px 5px rgba(59, 130, 246, 0.7); /* Stronger glow */
+    box-shadow: 0 0 15px 5px rgba(205, 252, 49, 0.7);
+    /* Stronger glow */
   }
+
   100% {
-    box-shadow: 0 0 0px 0px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 0px 0px rgba(205, 252, 49, 0.4);
   }
 }
 
 .image-glow {
-  animation: glow-pulse 3s infinite alternate ease-in-out; /* 3 seconds, repeats, reverses, smooth */
+  animation: glow-pulse 3s infinite alternate ease-in-out;
+  /* 3 seconds, repeats, reverses, smooth */
 }
 
 /* Add this to the bottom of your index.css file */
@@ -69,16 +91,19 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
+
 /* For the text color animation */
 .text-gradient-animated {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background: linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -86,28 +111,8 @@ html {
   animation: animate-text-gradient 5s ease-in-out infinite;
 }
 
-/* #about h2.text-gradient-animated {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: animate-text-gradient 5s ease-in-out infinite;
-} */
-
-/* Make sure this is correct in your index.css file */
-
-/* .text-gradient-animated {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;  
-  animation: animate-text-gradient 5s ease-in-out infinite;
-} */
-
 .text-gradient-animated-hero {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec48d9, #3b82f6);
+  background: linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -118,7 +123,8 @@ html {
 
 .text-gradient-paragraph {
   /* A subtle gradient from a darker to a lighter gray */
-  background: linear-gradient(90deg, #374151, #6b7280); /* gray-700 to gray-500 */
+  background: linear-gradient(90deg, #B0B0B0, #FFFFFF);
+  /* Light Gray to White */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -129,14 +135,18 @@ html {
 /* For the blinking cursor effect */
 .blinking-cursor {
   font-weight: 400;
-  color: #60a5fa; /* A light blue color */
+  color: var(--color-primary);
+  /* Acid Green */
   animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-  from, to {
+
+  from,
+  to {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -151,6 +161,7 @@ html {
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -167,6 +178,7 @@ html {
     transform: translateY(10px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -181,9 +193,16 @@ html {
 /* Add this to your index.css file */
 
 .button-gradient-animated {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6); /* blue-600 to violet-700 */
-  background-size: 200% 200%;
-  animation: animate-text-gradient 4s ease-in-out infinite; /* Reusing the keyframes */
+  background: var(--color-primary);
+  color: var(--color-background);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-gradient-animated:hover {
+  background: #bce62b;
+  /* Slightly darker/different shade for hover */
+  box-shadow: 0 0 15px rgba(205, 252, 49, 0.4);
 }
 
 /* This class will apply the animation */
@@ -193,33 +212,25 @@ html {
 
 
 /* Add this to your index.css file */
-.hover-text-gradient:hover{
-  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* blue-500 to purple-600 */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.hover-text-gradient:hover {
+  color: var(--color-primary);
   font-weight: 600;
 }
 
 .text-gradient-static {
-  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* blue-500 to purple-600 */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: 600; /* semibold */
+  color: var(--color-primary);
+  font-weight: 600;
+  /* semibold */
 }
 
 .bg-gradient-static {
-  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* blue-500 to purple-600 */
+  background-color: var(--color-primary);
 }
 
 /* Add this to the bottom of your index.css file */
 
 .other-skill-text-gradient {
-  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* Same gradient as the percentages */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-text-secondary);
 }
 
 
@@ -227,10 +238,9 @@ html {
 /* Add this to the bottom of your index.css file */
 
 .other-skill-text-gradient:hover {
-  background-image: linear-gradient(90deg, #3b82f6, #a855f7); /* Your theme gradient */
-  /* color: white; */
-  color: transparent;
-  border-color: transparent; /* Makes the gradient fill the entire space */
+  color: var(--color-primary);
+  border-color: transparent;
+  /* Makes the gradient fill the entire space */
 }
 
 
@@ -240,12 +250,12 @@ html {
 .social-icon-themed {
   /* position: relative; */
   /* background-color: white;  */
-  color: blueviolet;
-  border: 2px solid blueviolet; 
+  color: var(--color-text-secondary);
+  border: 2px solid var(--color-text-secondary);
 }
 
 /* This pseudo-element creates the gradient border */
-.social-icon-themed::before {
+/* .social-icon-themed::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -258,13 +268,12 @@ html {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;
-}
+} */
 
 /* This handles the hover effect */
 .social-icon-themed:hover {
-  background-image: linear-gradient(90deg, #3b82f6, #a855f7);
-  -webkit-background-clip: initial; /* Resets clipping so the background fills the whole box */
-  background-clip: initial;
-  color: white !important; /* Forces the icon color to white */
-  border-color: transparent; /* Makes the gradient fill the entire space */
+  background-color: var(--color-primary);
+  color: var(--color-background) !important;
+  /* Forces the icon color to black */
+  border-color: var(--color-primary);
 }

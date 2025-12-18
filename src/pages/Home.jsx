@@ -17,7 +17,7 @@ function Home() {
 
 
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="bg-[var(--color-background)] text-[var(--color-text-primary)]">
       <Navbar />
       <Hero />
       <About />

@@ -50,7 +50,7 @@ const Hero = () => {
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
           {/* MODIFIED h2 ELEMENT */}
-          <h2 
+          <h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4
                        opacity-0 animate-on-load text-gradient-animated-hero" // Removed old text color, added new gradient class
             style={{ animationDelay: '100ms' }}
@@ -58,27 +58,27 @@ const Hero = () => {
             Hi, I'm <span className="text-gradient-animated-hero">{text}</span><span className="blinking-cursor">|</span>
           </h2>
           {/* ... (the rest of your component remains the same) ... */}
-          <p 
-            className="text-base sm:text-lg md:text-xl text-gray-600 mb-6
-                       opacity-0 animate-on-load" 
+          <p
+            className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] mb-6
+                       opacity-0 animate-on-load"
             style={{ animationDelay: '300ms' }}
           >
             Junior MERN Stack Developer | React.js | Next.js | Node.js
           </p>
-          <div 
+          <div
             className="flex flex-col text-[14px] lg:text-[16px] sm:flex-row gap-4 sm:space-x-4 justify-center md:justify-start
                        opacity-0 animate-on-load"
             style={{ animationDelay: '500ms' }}
           >
             <a
               href="#projects"
-              className="px-6 py-3 button-gradient-animated text-white rounded-lg shadow hover:bg-blue-700 text-center"
+              className="px-6 py-3 button-gradient-animated text-[var(--color-background)] rounded-lg shadow hover:bg-[var(--color-primary)]/80 text-center"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow hover:bg-gray-300 text-center"
+              className="px-6 py-3 bg-[var(--color-surface)] text-[var(--color-text-primary)] rounded-lg shadow hover:bg-[var(--color-surface)]/80 text-center"
             >
               Contact Me
             </a>
@@ -86,12 +86,12 @@ const Hero = () => {
         </div>
 
         {/* Right Image */}
-        <div 
+        <div
           className="flex-1 flex justify-center 
                      opacity-0 animate-on-load"
           style={{ animationDelay: '700ms' }}
         >
-          <div className="w-60 h-60 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:h-90 lg:w-90 rounded-full overflow-hidden shadow-lg border-4 border-blue-300 image-glow">
+          <div className="w-60 h-60 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:h-90 lg:w-90 rounded-full overflow-hidden shadow-lg border-4 border-[var(--color-primary)] image-glow">
             <img
               src="https://avatars.githubusercontent.com/muzamilhussain33"
               alt="Muzamil Hussain"
