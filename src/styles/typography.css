@@ -1,0 +1,51 @@
+/* For the text color animation */
+.text-gradient-animated {
+    background: linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: animate-text-gradient 5s ease-in-out infinite;
+}
+
+.text-gradient-animated-hero {
+    background: linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-gradient-paragraph {
+    /* A subtle gradient from a darker to a lighter gray */
+    background: linear-gradient(90deg, #B0B0B0, #FFFFFF);
+    /* Light Gray to White */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hover-text-gradient:hover {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.text-gradient-static {
+    color: var(--color-primary);
+    font-weight: 600;
+    /* semibold */
+}
+
+.bg-gradient-static {
+    background-color: var(--color-primary);
+}
+
+.other-skill-text-gradient {
+    color: var(--color-text-secondary);
+}
+
+.other-skill-text-gradient:hover {
+    color: var(--color-primary);
+    border-color: transparent;
+    /* Makes the gradient fill the entire space */
+}

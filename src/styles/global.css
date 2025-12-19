@@ -1,0 +1,10 @@
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}

@@ -1,0 +1,12 @@
+.button-gradient-animated {
+    background: var(--color-primary);
+    color: var(--color-background);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button-gradient-animated:hover {
+    background: #bce62b;
+    /* Slightly darker/different shade for hover */
+    box-shadow: 0 0 15px rgba(205, 252, 49, 0.4);
+}

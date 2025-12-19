@@ -1,0 +1,39 @@
+/* 1. Animation for the whole navbar sliding down */
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-down {
+    animation: slide-down 0.7s ease-out forwards;
+}
+
+/* 2. Animation for the mobile menu items */
+@keyframes fade-in-up-nav {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menu-item-animate {
+    /* This animation will be applied to each mobile menu item */
+    animation: fade-in-up-nav 0.5s ease-out forwards;
+}
+
+/* This class will apply the animation */
+.section-item-animate {
+    animation: fade-in-up-nav 0.8s ease-out forwards;
+}

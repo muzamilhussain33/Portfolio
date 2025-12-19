@@ -1,0 +1,15 @@
+/* For the social media icons */
+.social-icon-themed {
+    /* position: relative; */
+    /* background-color: white;  */
+    color: var(--color-text-secondary);
+    border: 2px solid var(--color-text-secondary);
+}
+
+/* This handles the hover effect */
+.social-icon-themed:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background) !important;
+    /* Forces the icon color to black */
+    border-color: var(--color-primary);
+}

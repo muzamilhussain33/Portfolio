@@ -1,0 +1,94 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-load {
+    /* This class will apply the animation */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animated-background {
+    /* Define a gradient with a few more colors for a smoother effect */
+    background: linear-gradient(45deg, #16181C, #0A0C10, #16181C, #0A0C10);
+    /* Make the background size much larger than the element */
+    background-size: 400% 400%;
+    /* Apply the animation */
+    animation: animate-gradient 15s ease infinite;
+}
+
+@keyframes animate-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 0px 0px rgba(205, 252, 49, 0.4);
+        /* Acid Green with alpha */
+    }
+
+    50% {
+        box-shadow: 0 0 15px 5px rgba(205, 252, 49, 0.7);
+        /* Stronger glow */
+    }
+
+    100% {
+        box-shadow: 0 0 0px 0px rgba(205, 252, 49, 0.4);
+    }
+}
+
+.image-glow {
+    animation: glow-pulse 3s infinite alternate ease-in-out;
+    /* 3 seconds, repeats, reverses, smooth */
+}
+
+@keyframes animate-text-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* For the blinking cursor effect */
+.blinking-cursor {
+    font-weight: 400;
+    color: var(--color-primary);
+    /* Acid Green */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
