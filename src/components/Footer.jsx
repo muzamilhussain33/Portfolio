@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[var(--color-surface)] text-[var(--color-text-primary)]">
-      <div className="max-w-[1638px] mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-[1fr_1fr_1.5fr] gap-12">
+      <div className="max-w-[1638px] mx-auto px-6 md:px-16 py-16 grid grid-cols-1 lg:grid-cols-[1fr_1fr_1.5fr] gap-12">
 
         {/* Left Section */}
         <div
@@ -49,16 +49,15 @@ const Footer = () => {
 
         {/* Middle Section - Menu */}
         <div
-          className="flex flex-row flex-wrap justify-center lg:flex-col lg:justify-start items-center pr-20 text-[14px] 
-                     opacity-0 section-item-animate order-last lg:order-none gap-6 lg:gap-0"
+          className="flex flex-row flex-wrap justify-center md:items-start lg:flex-col items-center text-[14px] 
+                     opacity-0 section-item-animate order-last lg:order-none gap-4 lg:gap-0"
           style={{ animationDelay: '300ms' }}
         >
-          <h3 className="text-xl font-semibold mb-4 text-gradient-static w-full lg:w-auto text-center ">Menu</h3>
-          {/* --- Change #1: Added hover-text-gradient to menu links --- */}
-          <a href="#projects" className="md:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient">Projects</a>
-          <a href="#experience" className="md:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient">Experience</a>
-          <a href="#education" className="md:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient">Education</a>
-          <a href="#contact" className="md:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient">Contact</a>
+          <h3 className="text-xl font-semibold lg:mb-4 text-gradient-static w-full lg:w-auto text-center ">Menu</h3>
+          <a href="#projects" className="lg:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient ">Projects</a>
+          <a href="#experience" className="lg:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient ">Experience</a>
+          <a href="#education" className="lg:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient ">Education</a>
+          <a href="#contact" className="lg:mb-2 text-[var(--color-text-secondary)] hover:underline transition-transform hover:-translate-y-1 hover-text-gradient ">Contact</a>
         </div>
 
         {/* Right Section - Latest Projects */}

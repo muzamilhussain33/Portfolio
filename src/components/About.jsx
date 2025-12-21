@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="max-w-[1638px] mx-auto px-6 py-16">
+    <section id="about" className="max-w-[1638px] mx-auto px-6 md:px-16 py-16">
       <h2
         className="text-3xl font-bold mb-6 opacity-0 section-item-animate"
         style={{ animationDelay: '200ms' }}

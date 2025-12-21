@@ -5,7 +5,7 @@ import experiences from "../services/experience";
 const Experience = () => {
   return (
     <section id="experience" className="bg-[var(--color-background)] py-16">
-      <div className="max-w-[1638px] mx-auto px-6">
+      <div className="max-w-[1638px] mx-auto px-6 md:px-16">
         {/* Heading with animated gradient */}
         <h2
           className="text-3xl font-bold mb-12 text-start opacity-0 section-item-animate "

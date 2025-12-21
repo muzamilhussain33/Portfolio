@@ -5,18 +5,19 @@ import myImag from "../assets/Hero/man.png"
 
 const HeroSection = () => {
   return (
-    <div className="">
+    <div className=" px-5">
       <Navbar />
       {/* Main Content */}
-      <main className="min-h-[905px] max-w-[1638px] mx-auto px-6 md:px-16 mt-30 flex flex-col lg:flex-row items-center justify-between">
+      {/* Main Content */}
+      <main className="min-h-screen max-w-[1638px] mx-auto px-6 md:px-16 pt-32 pb-12 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
 
         {/* Left Side: Text */}
-        <div className="w-full lg:w-1/2 ">
-          <h1 className="text-7xl md:text-8xl font-black tracking-tight leading-[0.9]">
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-20">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9]">
             Programmar
           </h1>
-          <div className="flex items-center gap-4 mt-2">
-            <h2 className="text-7xl md:text-8xl font-black text-[#b4f42c] tracking-tight leading-[0.9]">
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-2 md:gap-4 mt-2">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-[#b4f42c] tracking-tight leading-[0.9]">
               Full Stack
             </h2>
             {/* Junior Tag */}
@@ -25,44 +26,46 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <p className="mt-8 text-lg md:text-xl text-gray-300 font-medium">
+          <p className="mt-6 md:mt-8 text-base md:text-xl text-gray-300 font-medium max-w-lg">
             Junior MERN Stack Developer | React.js | Next.js | Node.js
           </p>
 
-          <div className="flex items-center gap-5 mt-10 text-[26px] w-[442px] h-[70px]">
-            <button className="w-[50%] h-full border-2 border-[#b4f42c] text-[#b4f42c] rounded-xl font-bold hover:bg-[#b4f42c] hover:text-black transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#projects'}>
+          <div className="flex items-center gap-4 md:gap-5 mt-8 md:mt-10 text-lg md:text-[26px] w-full max-w-[442px] h-[60px] md:h-[70px]">
+            <button className="flex-1 h-full border-2 border-[#b4f42c] text-[#b4f42c] rounded-xl font-bold hover:bg-[#b4f42c] hover:text-black transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#projects'}>
               View Projects
             </button>
-            <button className="w-[50%] h-full bg-[#b4f42c] text-black rounded-xl font-bold hover:brightness-110 hover:bg-[var(--color-text-primary)] transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#contact'}>
+            <button className="flex-1 h-full bg-[#b4f42c] text-black rounded-xl font-bold hover:brightness-110 hover:bg-[var(--color-text-primary)] transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#contact'}>
               Contact Me
             </button>
           </div>
         </div>
 
         {/* Right Side: Visuals */}
-        <div className="relative h-[837px] w-[809px] flex justify-center items-center">
-          <div className="absolute top-10 left-5 md:left-5">
-            {/* <CodeIcon className="w-16 h-16 text-[#b4f42c] opacity-40" /> */}
-            <img src={tagimg} className='w-[160px] h-[139px]' alt="" />
+        <div className="relative w-full lg:w-1/2 flex justify-center items-center mt-10 lg:mt-0">
+          <div className="relative w-full max-w-[600px] lg:max-w-[809px] aspect-[809/837]">
+            {/* Top Tag */}
+            <div className="absolute top-[5%] left-[-5%] md:left-[0%] z-20">
+              <img src={tagimg} className='w-[77px] md:w-[110px] lg:w-[160px] ' alt="" />
+            </div>
+
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-black rounded-full blur-[80px] md:blur-[120px] custom-shadow z-0"></div>
+
+            {/* The Green Circle Outline */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[85%] border-[20px] md:border-[35px] border-[#b4f42c]/60 rounded-full z-10"></div>
+
+            {/* Bottom Tag */}
+            <div className="absolute bottom-[5%] right-[-5%] z-20">
+              <img src={tagimg} className='w-[77px] md:w-[110px] lg:w-[160px] h-auto' alt="" />
+            </div>
+
+            {/* Profile Image */}
+            <img
+              src={myImag}
+              alt="Muzzamil Hussain"
+              className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
+            />
           </div>
-          {/* Background Glow */}
-          <div className="absolute w-[157px] h-[164px]  bg-black rounded-full blur-[120px] custom-shadow"></div>
-
-          {/* The Green Circle Outline */}
-          <div className="absolute w-[615px] h-[689px] border-[35px] border-[#b4f42c]/60 rounded-full"></div>
-
-          {/* Custom Code Icons (SVGs for exact match) */}
-
-          <div className="absolute bottom-10 right-5">
-            <img src={tagimg} className='w-[160px] h-[139px]' alt="" />
-          </div>
-
-          {/* Profile Image (Replace with your actual PNG) */}
-          <img
-            src={myImag}
-            alt="Muzzamil Hussain"
-            className="relative z-10 w-full max-w-[809px] h-[837px] object-contain drop-shadow-2xl"
-          />
         </div>
 
       </main>

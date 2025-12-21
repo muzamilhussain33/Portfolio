@@ -7,21 +7,21 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[var(--color-background)] z-50 shadow shadow-[var(--color-primary)]/20 animate-slide-down">
-      <div className="max-w-[1638px] h-[116px] mx-auto px-6 py-4 flex justify-between items-center shadow shadow-[var(--color-primary)]/20 md:shadow-none">
+      <div className="max-w-[1638px] h-[80px] md:h-[116px] mx-auto px-6 md:px-16 py-4 flex justify-between items-center shadow shadow-[var(--color-primary)]/20 md:shadow-none">
         {/* Logo with Gradient */}
         <a href="/">
           <h1 className="flex items-end">
-            <img src={logo} className="w-[144px] h-[87px]" alt="logo" />
-            <span className="flex flex-col">
-              <h3 className="text-[32px] font-[600] font-[Poppins]">Muzamil Hussain</h3>
-              <p className="text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)]">Junior MERN Stack Developer</p>
+            <img src={logo} className="w-[90px] h-auto md:w-[110px] lg:w-[144px] md:h-auto" alt="logo" />
+            <span className="flex flex-col ml-2 md:ml-0">
+              <h3 className="text-[18px] md:text-[24px] lg:text-[32px] font-[600] font-[Poppins] leading-tight">Muzamil Hussain</h3>
+              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)]">Junior MERN Stack Developer</p>
             </span>
 
           </h1>
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-6 text-[16px] text-[var(--color-text-secondary)] font-medium items-center text-gradient-animated">
+        <ul className="hidden lg:flex space-x-4 xl:space-x-6 text-[14px] xl:text-[16px] text-[var(--color-text-secondary)] font-medium items-center text-gradient-animated">
           <li><a href="#about" className="hover:text-[var(--color-primary)]">About</a></li>
           <li><a href="#skills" className="hover:text-[var(--color-primary)]">Skills</a></li>
           <li><a href="#projects" className="hover:text-[var(--color-primary)]">Projects</a></li>
@@ -62,7 +62,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out px-6 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out px-6 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
       >
         <ul className="flex flex-col items-center space-y-4 py-4 text-[var(--color-text-secondary)] font-medium ">

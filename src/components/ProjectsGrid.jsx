@@ -3,7 +3,7 @@ import projects from "../services/projects";
 
 const ProjectsGrid = () => {
   return (
-    <section className="max-w-[1638px] mx-auto px-6 py-10">
+    <section className="max-w-[1638px] mx-auto px-6 md:px-16 py-10">
       <h2
         className="text-3xl font-bold mb-12 text-center opacity-0 section-item-animate text-gradient-animated"
         style={{ animationDelay: '100ms' }}
