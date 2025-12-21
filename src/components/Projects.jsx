@@ -21,7 +21,7 @@ const Projects = () => {
   const totalProjects = reversedProjects.length;
 
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
+    <section id="projects" className="max-w-[1638px] mx-auto px-6 py-16">
       <h2
         className="text-3xl font-bold mb-12 text-center opacity-0 section-item-animate text-gradient-animated"
         style={{ animationDelay: '100ms' }}

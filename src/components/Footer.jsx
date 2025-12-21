@@ -9,12 +9,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-[var(--color-surface)] text-[var(--color-text-primary)]">
-      <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-[1638px] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
 
         {/* Left Section */}
         <div
           className="flex flex-col items-center md:items-start text-center md:text-left 
-                     opacity-0 section-item-animate"
+                     opacity-0 section-item-animate border-2 border-[var(--color-text-primary)]"
           style={{ animationDelay: '100ms' }}
         >
           <h2 className="text-2xl font-bold text-gradient-animated">Muzamil Hussain</h2>
@@ -40,7 +40,7 @@ const Footer = () => {
         {/* Middle Section - Menu */}
         <div
           className="hidden md:flex flex-col items-center md:items-start text-[14px] 
-                     opacity-0 section-item-animate"
+                     opacity-0 section-item-animate border-2 border-[var(--color-text-primary)]"
           style={{ animationDelay: '300ms' }}
         >
           <h3 className="text-xl font-semibold mb-4 text-gradient-static">Menu</h3>
@@ -54,7 +54,7 @@ const Footer = () => {
         {/* Right Section - Latest Projects */}
         <div
           className="flex flex-col items-center md:items-start text-center md:text-left 
-                     opacity-0 section-item-animate"
+                     opacity-0 section-item-animate border-2 border-[var(--color-text-primary)]"
           style={{ animationDelay: '500ms' }}
         >
           <h3 className="text-xl font-semibold mb-4 text-gradient-static">Latest Projects</h3>

@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <section id="contact" className="bg-[var(--color-background)] py-16">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-[1638px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
 
         {/* --- Left: Contact Form (No Changes) --- */}
         <div

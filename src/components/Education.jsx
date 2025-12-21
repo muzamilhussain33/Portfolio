@@ -21,7 +21,7 @@ const Education = () => {
       id="education"
       className="bg-[var(--color-background)] py-16"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1638px] mx-auto px-6">
         <h2
           className="text-3xl font-bold mb-12 text-start opacity-0 section-item-animate text-gradient-animated"
           style={{ animationDelay: '100ms' }}

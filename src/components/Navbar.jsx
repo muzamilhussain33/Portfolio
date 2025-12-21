@@ -1,16 +1,22 @@
 import { Link } from "lucide-react";
 import React, { useState } from "react";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[var(--color-background)] z-50 shadow shadow-[var(--color-primary)]/20 animate-slide-down">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center shadow shadow-[var(--color-primary)]/20 md:shadow-none">
+      <div className="max-w-[1638px] h-[116px] mx-auto px-6 py-4 flex justify-between items-center shadow shadow-[var(--color-primary)]/20 md:shadow-none">
         {/* Logo with Gradient */}
         <a href="/">
-          <h1 className="text-2xl font-bold text-gradient-animated">
-            Muzamil Hussain
+          <h1 className="flex items-end">
+            <img src={logo} className="w-[144px] h-[87px]" alt="logo" />
+            <span className="flex flex-col">
+              <h3 className="text-[32px] font-[600] font-[Poppins]">Muzamil Hussain</h3>
+              <p className="text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)]">Junior MERN Stack Developer</p>
+            </span>
+
           </h1>
         </a>
 
@@ -22,12 +28,12 @@ const Navbar = () => {
           <li><a href="#experience" className="hover:text-[var(--color-primary)]">Experience</a></li>
           <li><a href="#education" className="hover:text-[var(--color-primary)]">Education</a></li>
           <li><a href="#contact" className="hover:text-[var(--color-primary)]">Contact</a></li>
-          <li>
+          <li className="w-[293px] h-[56px] border-[3px] border-[var(--color-primary)] rounded-[15px] flex items-center justify-center text-[26px] font-[600] font-[Poppins] hover:bg-[var(--color-primary)] hover:text-[var(--color-background)] transition-all duration-300 ease-in-out">
             {/* Desktop Download Button with Gradient */}
             <a
               href="/cv/Muzamil_Hussain.pdf"
               download="Muzamil Hussain.pdf"
-              className="px-4 py-2 text-[var(--color-background)] rounded-lg shadow transition button-gradient-animated hover:scale-105"
+              className=""
             >
               Download Resume
             </a>

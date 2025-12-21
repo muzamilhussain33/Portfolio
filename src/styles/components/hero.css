@@ -1,0 +1,12 @@
+/* Hero Component Styles */
+
+.custom-shadow {
+    /* Define variables for easy customization */
+    --shadow-color: var(--color-primary);
+    --shadow-blur: 250px;
+    --shadow-spread: 200px;
+    --shadow-x: 0;
+    --shadow-y: 20px;
+
+    box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+}
