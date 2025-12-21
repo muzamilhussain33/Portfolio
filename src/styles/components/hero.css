@@ -4,9 +4,24 @@
     /* Define variables for easy customization */
     --shadow-color: var(--color-primary);
     --shadow-blur: 250px;
-    --shadow-spread: 200px;
+    --shadow-spread: 150px;
     --shadow-x: 0;
     --shadow-y: 20px;
 
     box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+}
+
+
+@media (max-width: 768px) {
+    .custom-shadow {
+        --shadow-blur: 150px;
+        --shadow-spread: 100px;
+    }
+}
+
+@media (max-width: 425px) {
+    .custom-shadow {
+        --shadow-blur: 100px;
+        --shadow-spread: 50px;
+    }
 }

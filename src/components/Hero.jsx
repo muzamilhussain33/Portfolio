@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import tagimg from '../assets/Hero/tag.png'
 import myImag from "../assets/Hero/man.png"
-
+import jonTag from "../assets/Hero/jonTag.png"
 const HeroSection = () => {
   return (
     <div className=" px-5">
@@ -21,20 +21,21 @@ const HeroSection = () => {
               Full Stack
             </h2>
             {/* Junior Tag */}
-            <div className="bg-[#3e4d15] px-3 py-1 rounded-full self-center mt-2 border border-[#b4f42c]/30">
-              <span className="text-[#b4f42c] text-[10px] font-bold uppercase tracking-tighter">Junior</span>
-            </div>
+            {/* <div className="bg-[#3e4d15] px-3 py-1 rounded-full self-center mt-2 border border-[#b4f42c]/30"> */}
+            {/* <span className="text-[#b4f42c] text-[10px] font-bold uppercase tracking-tighter">Junior</span> */}
+            <img src={jonTag} className="w-[60px] md:w-[80px] lg:w-[100px] h-auto object-contain" alt="Junior" />
+            {/* </div> */}
           </div>
 
           <p className="mt-6 md:mt-8 text-base md:text-xl text-gray-300 font-medium max-w-lg">
             Junior MERN Stack Developer | React.js | Next.js | Node.js
           </p>
 
-          <div className="flex items-center gap-4 md:gap-5 mt-8 md:mt-10 text-lg md:text-[26px] w-full max-w-[442px] h-[60px] md:h-[70px]">
-            <button className="flex-1 h-full border-2 border-[#b4f42c] text-[#b4f42c] rounded-xl font-bold hover:bg-[#b4f42c] hover:text-black transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#projects'}>
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 md:mt-10 w-full lg:max-w-[442px] h-auto lg:h-[70px]">
+            <button className="w-full lg:flex-1 h-[56px] lg:h-full border-2 border-[#b4f42c] text-[#b4f42c] rounded-xl font-bold hover:bg-[#b4f42c] hover:text-black transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#projects'}>
               View Projects
             </button>
-            <button className="flex-1 h-full bg-[#b4f42c] text-black rounded-xl font-bold hover:brightness-110 hover:bg-[var(--color-text-primary)] transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#contact'}>
+            <button className="w-full lg:flex-1 h-[56px] lg:h-full bg-[#b4f42c] text-black rounded-xl font-bold hover:brightness-110 hover:bg-[var(--color-text-primary)] transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#contact'}>
               Contact Me
             </button>
           </div>
