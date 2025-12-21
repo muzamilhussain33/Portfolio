@@ -1,15 +1,34 @@
+import React, { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashborad";
 import AppRouter from "./Router";
+import Loader from "./components/Loader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial loading time (e.g., for assets or data)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      {/* <Home /> */}
-      {/* <Login /> */}
-      {/* <AdminDashboard /> */}
-      <AppRouter />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          {/* <Home /> */}
+          {/* <Login /> */}
+          {/* <AdminDashboard /> */}
+          <AppRouter />
+        </>
+      )}
     </>
   );
 }
