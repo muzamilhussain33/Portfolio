@@ -45,8 +45,8 @@ const HeroSection = () => {
         <div className="relative w-full lg:w-1/2 flex justify-center items-center mt-10 lg:mt-0">
           <div className="relative w-full max-w-[600px] lg:max-w-[809px] aspect-[809/837]">
             {/* Top Tag */}
-            <div className="absolute top-[5%] left-[-5%] md:left-[0%] z-20">
-              <img src={tagimg} className='w-[77px] md:w-[110px] lg:w-[160px] ' alt="" />
+            <div className="absolute sm:top-[5%] top-0 left-[-5%] md:left-[0%] z-20">
+              <img src={tagimg} className='w-[77px] sm:w-[100px] lg:w-[150px] ' alt="" />
             </div>
 
             {/* Background Glow */}
@@ -56,8 +56,8 @@ const HeroSection = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[85%] border-[20px] md:border-[35px] border-[#b4f42c]/60 rounded-full z-10"></div>
 
             {/* Bottom Tag */}
-            <div className="absolute bottom-[5%] right-[-5%] z-20">
-              <img src={tagimg} className='w-[77px] md:w-[110px] lg:w-[160px] h-auto' alt="" />
+            <div className="absolute bottom-[5%] right-[-8%] z-20">
+              <img src={tagimg} className='w-[77px] sm:w-[100px] lg:w-[150px]' alt="" />
             </div>
 
             {/* Profile Image */}
