@@ -87,11 +87,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Copyright */}
-      <ScrollReveal direction="up" delay={600}>
-        <div className="text-center bg-[var(--color-background)] text-[var(--color-text-secondary)] text-sm py-4">
-          © {new Date().getFullYear()} Copyright Muzamil Hussain. | All rights reserved.
-        </div>
-      </ScrollReveal>
+      {/* Bottom Copyright */}
+      <div className="text-center bg-[var(--color-background)] text-[var(--color-text-secondary)] text-sm py-4">
+        © {new Date().getFullYear()} Copyright Muzamil Hussain. | All rights reserved.
+      </div>
     </footer>
   );
 };
