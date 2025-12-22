@@ -4,7 +4,7 @@
     /* Define variables for easy customization */
     --shadow-color: var(--color-primary);
     --shadow-blur: 250px;
-    --shadow-spread: 150px;
+    --shadow-spread: 100px;
     --shadow-x: 0;
     --shadow-y: 20px;
 
@@ -12,10 +12,144 @@
 }
 
 
+
+
+@media (max-width: 1400px) {
+    .hero {
+        /* min-height: 900px; */
+    }
+
+    .hero_left {
+        margin-bottom: 10%;
+    }
+
+    .hero_right {}
+
+    .hero_tags {
+        width: 100px;
+    }
+
+    .download_button {
+        width: 230px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .download_button {
+        width: 200px;
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .hero {}
+
+    .logoimg_hero {
+        width: 100px;
+    }
+
+    .logotext_hero {
+        font-size: 26px;
+    }
+
+    .logosubtext_hero {
+        font-size: 12px;
+    }
+
+    .mainHeding_hero {
+        font-size: 5rem;
+    }
+
+    .subHeding_hero {
+        font-size: 4rem;
+    }
+
+    .download_button {
+        width: 180px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero_left {
+        margin-bottom: 5%;
+    }
+
+    .download_button {
+        width: 130px;
+        height: 50px;
+        font-size: 11px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .custom-shadow {
         --shadow-blur: 150px;
-        --shadow-spread: 100px;
+        --shadow-spread: 70px;
+    }
+
+    .logoimg_hero {
+        width: 80px;
+    }
+
+    .logotext_hero {
+        font-size: 20px;
+    }
+
+    .logosubtext_hero {
+        font-size: 10px;
+    }
+
+    .mainHeding_hero {
+        font-size: 3.5rem;
+    }
+
+    .subHeding_hero {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-shadow {
+        --shadow-blur: 100px;
+        --shadow-spread: 50px;
+    }
+
+    .logoimg_hero {
+        width: 60px;
+    }
+
+    .logotext_hero {
+        font-size: 16px;
+    }
+
+    .logosubtext_hero {
+        font-size: 9px;
+    }
+
+    .mainHeding_hero {
+        font-size: 2.5rem;
+    }
+
+    .subHeding_hero {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .logoimg_hero {
+        width: 50px;
+    }
+
+    .logotext_hero {
+        font-size: 14px;
+    }
+
+    .logosubtext_hero {
+        font-size: 8px;
     }
 }
 

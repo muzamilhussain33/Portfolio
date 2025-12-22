@@ -11,10 +11,10 @@ const Navbar = () => {
         {/* Logo with Gradient */}
         <a href="/">
           <h1 className="flex items-end">
-            <img src={logo} className="w-[90px] h-auto md:w-[110px] lg:w-[144px] md:h-auto" alt="logo" />
+            <img src={logo} className="w-[90px] h-auto md:w-[110px] lg:w-[144px] md:h-auto logoimg_hero" alt="logo" />
             <span className="flex flex-col ml-2 md:ml-0">
-              <h3 className="text-[18px] md:text-[24px] lg:text-[32px] font-[600] font-[Poppins] leading-tight">Muzamil Hussain</h3>
-              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)]">Junior MERN Stack Developer</p>
+              <h3 className="text-[18px] md:text-[24px] lg:text-[32px] font-[600] font-[Poppins] leading-tight logotext_hero">Muzamil Hussain</h3>
+              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)] logosubtext_hero">Junior MERN Stack Developer</p>
             </span>
 
           </h1>
@@ -28,7 +28,7 @@ const Navbar = () => {
           <li><a href="#experience" className="hover:text-[var(--color-primary)]">Experience</a></li>
           <li><a href="#education" className="hover:text-[var(--color-primary)]">Education</a></li>
           <li><a href="#contact" className="hover:text-[var(--color-primary)]">Contact</a></li>
-          <li className="w-[293px] h-[56px] border-[3px] border-[var(--color-primary)] rounded-[15px] flex items-center justify-center text-[26px] font-[600] font-[Poppins] hover:bg-[var(--color-primary)] hover:text-[var(--color-background)] transition-all duration-300 ease-in-out">
+          <li className="w-[293px] h-[56px] border-[3px] border-[var(--color-primary)] rounded-[15px] flex items-center justify-center text-[26px] font-[600] font-[Poppins] hover:bg-[var(--color-primary)] hover:text-[var(--color-background)] transition-all duration-300 ease-in-out download_button">
             {/* Desktop Download Button with Gradient */}
             <a
               href="/cv/Muzamil_Hussain.pdf"
