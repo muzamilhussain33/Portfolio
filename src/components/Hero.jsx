@@ -62,7 +62,7 @@ const HeroSection = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[85%] border-[20px] md:border-[35px] border-[#b4f42c]/60 rounded-full z-10"></div>
 
             {/* Bottom Tag */}
-            <div className="hero_tags absolute bottom-[5%] right-[-20%] z-20">
+            <div className="hero_tags absolute bottom-[5%] right-[-15%] sm:right-[-8%] z-20">
               <img src={tagimg} className='w-[77px] sm:w-[100px] lg:w-[150px]' alt="" />
             </div>
 
