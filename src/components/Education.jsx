@@ -1,5 +1,6 @@
 import React from "react";
 import { GraduationCap } from "lucide-react"; // nice education icon
+import ScrollReveal from "./ScrollReveal";
 
 // Education Data
 const education = [
@@ -19,15 +20,14 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="bg-[var(--color-background)] py-16"
+      className="bg-[var(--color-surface)] py-16"
     >
       <div className="max-w-[1638px] mx-auto px-6 md:px-16">
-        <h2
-          className="text-3xl font-bold mb-12 text-start opacity-0 section-item-animate text-gradient-animated"
-          style={{ animationDelay: '100ms' }}
-        >
-          <span className="text-gradient-animated">Education</span>
-        </h2>
+        <ScrollReveal direction="left">
+          <h2 className="text-3xl font-bold mb-12 text-start">
+            <span className="text-gradient-animated">Education</span>
+          </h2>
+        </ScrollReveal>
 
         {/* --- This is the main change --- */}
         {/* Container for the timeline. The border is removed from here. */}
@@ -36,10 +36,11 @@ const Education = () => {
           <div className="absolute top-0 left-0 w-1 h-full bg-[var(--color-primary)]"></div>
 
           {education.map((edu, index) => (
-            <div
+            <ScrollReveal
               key={index}
-              className="mb-10 ml-6 group opacity-0 section-item-animate"
-              style={{ animationDelay: `${200 + index * 200}ms` }}
+              direction="right"
+              delay={index * 100}
+              className="mb-10 ml-6 group"
             >
               {/* The icon's position is now relative to the new line */}
               <span className="image-glow absolute -left-11 flex items-center justify-center w-10 h-10 
@@ -58,7 +59,7 @@ const Education = () => {
                 <p className="text-[var(--color-primary)] font-medium">{edu.institute}</p>
                 <p className="text-sm text-[var(--color-text-secondary)] mt-1">{edu.period}</p>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

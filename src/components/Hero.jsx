@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import tagimg from '../assets/Hero/tag.png'
 import myImag from "../assets/Hero/man.png"
+import ScrollReveal from './ScrollReveal';
 const HeroSection = () => {
   return (
     <div className=" px-5 overflow-hidden hero">
@@ -12,13 +13,17 @@ const HeroSection = () => {
 
         {/* Left Side: Text */}
         <div className="hero_left w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-20 mb-[15%]">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mainHeding_hero">
-            Programmar
-          </h1>
+          <ScrollReveal direction="left"> {/* Wrapped h1 with ScrollReveal */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mainHeding_hero">
+              Programmar
+            </h1>
+          </ScrollReveal>
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-2 md:gap-4 mt-2">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-[#b4f42c] tracking-tight leading-[0.9] subHeding_hero">
-              Full Stack
-            </h2>
+            <ScrollReveal direction="right" delay={200}> {/* Wrapped h2 with ScrollReveal */}
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-[#b4f42c] tracking-tight leading-[0.9] subHeding_hero">
+                Full Stack
+              </h2>
+            </ScrollReveal>
             {/* Junior Tag */}
             {/* <div className="bg-[#3e4d15] px-3 py-1 rounded-full self-center mt-2 border border-[#b4f42c]/30"> */}
             {/* <span className="text-[#b4f42c] text-[10px] font-bold uppercase tracking-tighter">Junior</span> */}
@@ -26,9 +31,11 @@ const HeroSection = () => {
             {/* </div> */}
           </div>
 
-          <p className="mt-6 md:mt-8 text-base md:text-xl text-gray-300 font-medium max-w-lg">
-            Junior MERN Stack Developer | React.js | Next.js | Node.js
-          </p>
+          <ScrollReveal direction="up" delay={400}> {/* Wrapped p with ScrollReveal */}
+            <p className="mt-6 md:mt-8 text-base md:text-xl text-gray-300 font-medium max-w-lg">
+              Junior MERN Stack Developer | React.js | Next.js | Node.js
+            </p>
+          </ScrollReveal>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 md:mt-10 w-full lg:max-w-[442px] h-auto lg:h-[70px]">
             <button className="w-full lg:flex-1 h-[56px] lg:h-full border-2 border-[#b4f42c] text-[#b4f42c] rounded-xl font-bold hover:bg-[#b4f42c] hover:text-black transition-all duration-200 ease-in-out" onClick={() => window.location.href = '#projects'}>

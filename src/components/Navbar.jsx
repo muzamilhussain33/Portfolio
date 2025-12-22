@@ -14,9 +14,8 @@ const Navbar = () => {
             <img src={logo} className="w-[90px] h-auto md:w-[110px] lg:w-[144px] md:h-auto logoimg_hero" alt="logo" />
             <span className="flex flex-col ml-2 md:ml-0">
               <h3 className="text-[18px] md:text-[24px] lg:text-[32px] font-[600] font-[Poppins] leading-tight logotext_hero">Muzamil Hussain</h3>
-              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)] logosubtext_hero">Junior MERN Stack Developer</p>
+              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)] logosubtext_hero">MERN Stack Developer</p>
             </span>
-
           </h1>
         </a>
 
@@ -60,28 +59,27 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out px-6 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out px-6 bg-[var(--color-background)] border-t border-[var(--color-primary)]/20 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
       >
         <ul className="flex flex-col items-center space-y-4 py-4 text-[var(--color-text-secondary)] font-medium ">
-          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '100ms' }}>
+          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '100ms' }}>
             <a href="#about" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>About</a>
           </li>
-          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '200ms' }}>
+          <li className="opacity-0 menu-item-animate" style={{ animationDelay: '200ms' }}>
             <a href="#skills" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Skills</a>
           </li>
-          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '300ms' }}>
+          <li className="" style={{ animationDelay: '300ms' }}>
             <a href="#projects" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Projects</a>
           </li>
-          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '400ms' }}>
+          <li className="" style={{ animationDelay: '400ms' }}>
             <a href="#experience" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Experience</a>
           </li>
-          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '500ms' }}>
+          <li className="" style={{ animationDelay: '500ms' }}>
             <a href="#education" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Education</a>
           </li>
-          <li className="opacity-0 menu-item-animate text-gradient-static" style={{ animationDelay: '600ms' }}>
+          <li className="" style={{ animationDelay: '600ms' }}>
             <a href="#contact" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Contact</a>
           </li>
           <li className="w-full flex mx-auto opacity-0 menu-item-animate" style={{ animationDelay: '700ms' }}>
@@ -90,9 +88,11 @@ const Navbar = () => {
               href="/cv/Muzamil_Hussain.pdf"
               download="Muzamil Hussain.pdf"
               onClick={() => setIsOpen(false)}
-              className="w-full px-6 text-center text-[var(--color-background)] py-3 rounded-lg shadow transition button-gradient-animated hover:scale-105"
+              className="group w-full h-[56px] border-[3px] border-[var(--color-primary)] rounded-[15px] flex items-center justify-center text-[18px] font-[600] font-[Poppins] hover:bg-[var(--color-primary)] transition-all duration-300 ease-in-out"
             >
-              Download Resume
+              <span className="text-gradient-animated group-hover:bg-none group-hover:!text-black group-hover:bg-clip-border transition-all duration-300">
+                Download Resume
+              </span>
             </a>
           </li>
         </ul>

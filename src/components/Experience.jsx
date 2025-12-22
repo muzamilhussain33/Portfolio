@@ -1,18 +1,18 @@
 import React from "react";
 import { Briefcase } from "lucide-react";
 import experiences from "../services/experience";
+import ScrollReveal from "./ScrollReveal";
 
 const Experience = () => {
   return (
     <section id="experience" className="bg-[var(--color-background)] py-16">
       <div className="max-w-[1638px] mx-auto px-6 md:px-16">
         {/* Heading with animated gradient */}
-        <h2
-          className="text-3xl font-bold mb-12 text-start opacity-0 section-item-animate "
-          style={{ animationDelay: '100ms' }}
-        >
-          <span className="text-gradient-animated">Work Experience</span>
-        </h2>
+        <ScrollReveal direction="left">
+          <h2 className="text-3xl font-bold mb-12 text-start">
+            <span className="text-gradient-animated">Work Experience</span>
+          </h2>
+        </ScrollReveal>
 
         {/* Timeline container with gradient line */}
         <div className="relative ml-4">
@@ -21,10 +21,11 @@ const Experience = () => {
 
           {experiences.map((exp, index) => (
             // Staggered animation for each timeline entry
-            <div
+            <ScrollReveal
               key={index}
-              className="mb-10 ml-6 group opacity-0 section-item-animate"
-              style={{ animationDelay: `${200 + index * 200}ms` }}
+              direction="right"
+              delay={index * 100}
+              className="mb-10 ml-6 group"
             >
               {/* Icon with gradient and glow effect */}
               <span className="image-glow absolute -left-11 flex items-center justify-center w-10 h-10 
@@ -50,7 +51,7 @@ const Experience = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
